@@ -4,7 +4,7 @@ def mavenHome = tool name: "maven3.6.3"
     
     stage("1. git clone")
     {
-       git credentialsId: 'gitCredentials', url: 'https://github.com/WinifredZenabuin/UnityProject.git'
+       git credentialsId: 'gitCredentials', url: 'https://github.com/elk8622/unityproject.git'
     }
     
     stage("2. Maven Build")
