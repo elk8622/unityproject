@@ -75,9 +75,9 @@ spec:
          - containerPort: 27017
          env:
          - name: MONGO_INITDB_ROOT_USERNAME
-           value: devdb
+           value: eldev
          - name: MONGO_INITDB_ROOT_PASSWORD
-           value: devdb@123
+           value: admin@123
          volumeMounts:
          - name: pvc
            mountPath: /data/db   
