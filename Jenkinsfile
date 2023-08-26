@@ -31,7 +31,7 @@ def mavenHome = tool name: "maven3.6.3"
     stage('6. Push Docker Image to Docker Hub')
     {
        withCredentials([string(credentialsId: 'DockerHubCredentials', variable: 'DockerHubCredentials')]) {
-       sh " docker login -u legah2045 -p ${DockerHubCredentials} "
+       sh " docker login -u ellakumi -p ${DockerHubCredentials} "
      }
 
         sh " docker push legah2045/springboot-app "
@@ -51,10 +51,10 @@ def mavenHome = tool name: "maven3.6.3"
 
     stage('8 EmailNotification')
  {
- mail bcc: 'abihngeng@yahoo.com', body: '''Build is over
+ mail bcc: 'ellakumi173@gmail.com', body: '''Build is over
  Thanks,
  Mithun Technologies,
- 9980923226.''', cc: 'abihngeng@yahoo.com', from: '', replyTo: '', subject: 'Build is over!!', to: 'abihngeng@gmail.com'
+ 9980923226.''', cc: 'ellakumi173@gmail.com', from: '', replyTo: '', subject: 'Build is over!!', to: 'ellakumi173@gmail.com'
  }
  */
  
