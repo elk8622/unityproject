@@ -21,9 +21,9 @@ spec:
         - containerPort: 8080
         env:
         - name: MONGO_DB_USERNAME
-          value: devdb
+          value: eldev
         - name: MONGO_DB_PASSWORD
-          value: devdb@123
+          value: admin@123
         - name: MONGO_DB_HOSTNAME
           value: mongo 
 ---
