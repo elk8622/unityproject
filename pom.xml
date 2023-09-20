@@ -18,6 +18,9 @@
 		<spring-boot.version>2.1.5.RELEASE</spring-boot.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
 		<logstash-logback-encoder.version>6.1</logstash-logback-encoder.version>
+		<sonar.host.url>http://172.0.0.7:9000/</sonar.host.url> 
+		<sonar.login>admin</sonar.login>
+		<sonar.password>admin</sonar.password> 
 	</properties>
 
 	<dependencyManagement>
@@ -82,6 +85,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+	</dependencies>	
+	<distributionManagement>
+	    <repository>
+	      <id>nexus</id>
+	      <name>Landmark Technologies Releases Nexus Repository</name>
+	      <url>http://34.217.27.159:8081/repository/tesla-releases/</url>
+	    </repository>
+	    
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>Landmark Technologies Snapshot Nexus Repository </name>
+	      <url>http://34.217.27.159:8081/repository/tesla-snapshots/</url>
+	    </snapshotRepository>
 	</dependencies>
 	<build>
 		<plugins>
